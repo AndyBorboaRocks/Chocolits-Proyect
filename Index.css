@@ -161,20 +161,18 @@ body {
     align-items: center;
     flex-wrap: wrap;
 }
-.informacion-adicional {
-   display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
-    text-align: center;
+.contenedor-informacion {
+    display: flex;
+    justify-content: space-between;
     width: 100%;
     gap: 1em;
 }
 .caracteristica Img {
-    display: flex;
+    margin-right: 80px;
     padding: 0%;
     width: 100%;
     gap: 1em;
+    height: auto;
 }
 .contenedor-footer {
     list-style: none;
