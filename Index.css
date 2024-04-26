@@ -162,12 +162,13 @@ body {
     flex-wrap: wrap;
 }
 .informacion-adicional {
-    display: grid;
-    grid-template-rows:max-content 1fr;
-    grid-template-areas:
-    "nav"
-    "content";
-    min-height: 50vh;
+   display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    gap: 1em;
 }
 .caracteristica Img {
     display: flex;
