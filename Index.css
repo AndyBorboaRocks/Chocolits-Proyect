@@ -1,50 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Platypi:ital,wght@0,300..800;1,300..800&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f5f5f5;
+    font-family: 'Platypi', sans-serif;
 }
-
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-}
-
 .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
 }
-
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-}
-
-nav li {
-    display: inline-block;
-    margin-right: 20px;
-}
-
-nav a {
+.chocolate {
+    background-image: linear-gradient(-60deg, #ff5858 0%, #f09819 100%);
     color: #fff;
+    display: grid;
+    grid-template-rows:max-content 1fr;
+    grid-template-areas:
+    "nav"
+    "content";
+    min-height: 50vh;
+}
+.nav {
+    /*Borraste un grid-area: nav;*/
+    grid-area: nav;
+    display: grid;
+    justify-content: space-between;
+    grid-auto-flow: column;
+    gap: 1em;
+    align-items: center;
+    height: 90px;
+}
+.chocolate_picture {
+    display: block;
+}
+.nav_list {
+    list-style: none;
+    display: grid;
+    grid-auto-flow: column;
+    gap: 1em;
+}
+.nav_link {
+    color:azure;
     text-decoration: none;
 }
-
+.nav_logo {
+    font-size: 2em;
+    font-weight: 800;
+    align-items: center;
+}
+.nav_menu {
+    display: none;
+}
+.nav_icon {
+    width: 30px;
+}
+.chocolate_main {
+    /*Borraste un grid-area: content;*/
+    grid-area: content;
+    display: grid;
+    gap: 2em;
+    grid-template-columns: 1fr 1fr;
+    padding-bottom: 180px;
+    align-items: center;
+}
+.chocolate_waves {
+   /*Borraste un grid-area: content;*/
+   grid-area: content;
+   align-self: end;
+}
+.chocolate_title {
+    font-size: 2.6rem;
+    letter-spacing: 2px;
+}
+.chocolate_subtitle {
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    font-weight: 300px;
+}
+.chocolate_cta {
+    text-decoration: none;
+    color:azure;
+    padding: 15px 60px;
+    border: 1px solid;
+    border-radius: 6px;
+    display: inline-block;
+    font-weight: 500;
+    transition: background-color .3s;
+}
+.chocolate_cta:hover {
+    background-color: azure;
+    color:burlywood;
+}
+.chocolate_img {
+    width: 100px;
+}
 .jumbotron {
     background-color: #fff;
     padding: 80px 0;
     text-align: center;
+    grid-area: content;
+    display: grid;
+    gap: 2em;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding-bottom: 180px;
+    align-items: center;
 }
 
 .contenedor-jumbotron {
+    display: contents;
+    text-align: center;
     max-width: 800px;
     margin: 0 auto;
+    gap: 2em;
 }
-
 .boton {
     background-color: #4CAF50;
     color: white;
@@ -56,9 +128,79 @@ nav a {
 }
 
 .blog {
-    padding: 40px 0;
+    background-image: linear-gradient(-60deg, #ff5858 0%, #f09819 100%);
+    display: grid;
+    grid-template-rows:max-content 1fr;
+    grid-template-areas:
+    "nav"
+    "content";
+    min-height: 50vh;
+}
+.contenedor-entradas {
+    grid-area: content;
+    display: grid;
+    gap: 2em;
+    grid-template-columns: 1fr 1fr;
+    padding-bottom: 50px;
+    align-items: center;
+}
+.entrada img {
+    width: 100%;
+}
+.boton {
+    display: inline-block;
+}
+.chocolate_waves_2 {
+    /*Borraste un grid-area: content;*/
+    grid-area: content;
+    align-self: end;
+ }
+.contenedor-entradas {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.informacion-adicional {
+    display: grid;
+    grid-template-rows:max-content 1fr;
+    grid-template-areas:
+    "nav"
+    "content";
+    min-height: 50vh;
+}
+.caracteristica Img {
+    display: flex;
+    padding: 0%;
+    width: 100%;
+    gap: 1em;
+}
+.contenedor-footer {
+    list-style: none;
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: space-between;
+    gap: 1em;
+}
+@media (max-width:800px) {
+    .nav_list{
+        display: none;
+    }
+    .nav_menu {
+        display: block;
+    }
+    .chocolate_main {
+        grid-template-columns: 1fr;
+        grid-template-rows: max-content max-content;
+        text-align: center;
+    }
+    .chocolate_picture {
+        grid-row: 1/2;
+    }
+    .chocolate_img {
+        max-width: 500px;
+        display: block;
+        margin: 0 auto;
+    }
 }
 
-.contenedor-entradas {
-    display: flex
-}
